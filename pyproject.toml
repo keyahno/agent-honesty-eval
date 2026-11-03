@@ -1,0 +1,17 @@
+[project]
+name = "honesty-eval"
+version = "0.1.0"
+description = "Do tool-using agents honestly report failure? A small pre-registered eval."
+requires-python = ">=3.11"
+dependencies = ["inspect_ai==0.3.287", "anthropic", "openai"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[tool.setuptools]
+packages = ["honesty_eval"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
